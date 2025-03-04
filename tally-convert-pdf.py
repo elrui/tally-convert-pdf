@@ -1,3 +1,5 @@
+__version__ = "1.0.0"
+
 import os
 import shutil
 import logging

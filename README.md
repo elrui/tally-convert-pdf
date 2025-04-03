@@ -2,6 +2,10 @@
 
 This script converts PDF files to JPG images and moves the original PDF and corresponding metadata files to a target directory. It uses the `pdf2image` library for PDF to image conversion.
 
+## Motivation
+
+Originally this was designed to take a directory (or hierarchy) containing PDFs together with metadata (scanned tally reports from polling stations, with an auxiliary text file containing the results in digital format), and convert the report to an image easy to handle and publish, together with the original meta-information.
+
 ## Requirements
 
 - Python 3.6+
@@ -40,7 +44,7 @@ meta = csv
 - `source`: Directory containing the PDF files to be converted.
 - `target`: Directory where the converted JPG images and original PDF/metadata files will be moved.
 - `logs`: Directory for log files. If left empty, the script directory will be used.
-- `flat_target`: If set to `True`, subdirectories in the source directory will be ignored.
+- `flat_target`: If set to `True`, subdirectories in the source directory will not be replicated in the target. Notice that this can have undesired effects if filenames are not unique.
 - `dpi`: DPI (dots per inch) setting for image conversion.
 - `meta`: Extension of the metadata files (e.g., `csv`).
 
